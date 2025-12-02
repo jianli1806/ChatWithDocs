@@ -30,7 +30,9 @@ graph LR
     QueryVector -->|Similarity Search| DB
     DB -->|Retrieve Top-K| Context
     Context -->|Augment Prompt| LLM[🦙 Llama 3]
-    LLM -->|Generate| Answer[Final Answer] ```
+    LLM -->|Generate| Answer[Final Answer]
+```
+
 
 🛠️ Tech Stack
 LLM Framework: LangChain (Community & Core)
