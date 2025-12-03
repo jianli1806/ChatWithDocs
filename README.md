@@ -46,42 +46,47 @@ Frontend: Streamlit
 
 Deployment: Streamlit Community Cloud
 
-🚀 Quick Start
-Prerequisites
-Python 3.9+
+## 🚀 Quick Start
 
-Groq API Key
+### Prerequisites
+* Python 3.9+
+* Groq API Key
 
-Installation
-Clone the repository
+### Installation
 
-Bash
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/yourusername/ChatWithDocs.git](https://github.com/yourusername/ChatWithDocs.git)
+    cd ChatWithDocs
+    ```
 
-git clone https://github.com/yourusername/ChatWithDocs.git
-cd ChatWithDocs
-Install dependencies
+2.  **Install dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Bash
+3.  **Configure Environment**
+    Create a `.env` file in the root directory:
+    ```env
+    GROQ_API_KEY=your_groq_api_key_here
+    ```
 
-pip install -r requirements.txt
-Configure Environment Create a .env file in the root directory:
+4.  **Run the Application**
+    ```bash
+    streamlit run main.py
+    ```
 
-Code snippet
+## 💡 How It Works
 
-GROQ_API_KEY=your_groq_api_key_here
-Run the Application
 
-Bash
 
-streamlit run main.py
-💡 How It Works
-Ingestion: The app loads your PDF and splits it into smaller, overlapping chunks (to preserve context).
+[Image of Retrieval Augmented Generation flow diagram]
 
-Embedding: Each chunk is converted into a numerical vector using a local embedding model.
 
-Retrieval: When you ask a question, the system searches ChromaDB for the chunks mathematically closest to your query.
+1.  **Ingestion:** The app loads your PDF and splits it into smaller, overlapping chunks (to preserve context).
+2.  **Embedding:** Each chunk is converted into a numerical vector using a local embedding model.
+3.  **Retrieval:** When you ask a question, the system searches ChromaDB for the chunks mathematically closest to your query.
+4.  **Generation:** The LLM receives your question along with the retrieved chunks to generate a grounded answer.
 
-Generation: The LLM receives your question along with the retrieved chunks to generate a grounded answer.
-
-📄 License
+## 📄 License
 Distributed under the MIT License.
