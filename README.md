@@ -7,7 +7,6 @@
 
 **ChatWithDocs** is a retrieval-augmented generation (RAG) application designed to interact with private, unstructured data. By leveraging vector embeddings and large language models (LLMs), it allows users to upload PDF documents and ask context-aware questions with high semantic accuracy.
 
-🔗 **[Live Demo](https://your-app-url.streamlit.app)** *(Optional: Add your link here after deployment)*
 
 ## 🧠 Key Features
 
@@ -56,23 +55,23 @@ Groq API Key
 Installation
 Clone the repository
 
+Bash
 
-
-git clone [https://github.com/yourusername/ChatWithDocs.git](https://github.com/yourusername/ChatWithDocs.git)
+git clone https://github.com/yourusername/ChatWithDocs.git
 cd ChatWithDocs
 Install dependencies
 
-
+Bash
 
 pip install -r requirements.txt
 Configure Environment Create a .env file in the root directory:
 
-
+Code snippet
 
 GROQ_API_KEY=your_groq_api_key_here
 Run the Application
 
-
+Bash
 
 streamlit run main.py
 💡 How It Works
